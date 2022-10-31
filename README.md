@@ -1,7 +1,7 @@
 # springboot-hexagonal-example
 Example java spring boot application with hexagonal architecture
 
-# TODO
+## TODO
 - [ ] Refactor and modularize application folder
 - [ ] Modify all groupid of poms
 - [ ] Add postman collections
@@ -11,9 +11,9 @@ Example java spring boot application with hexagonal architecture
 - [ ] Improve documentation
 - [ ] Add more unit tests
 
-# RUN
+## RUN
 ```console
 docker-compose up
 ```
-# TEST
+## TEST
 GET http://localhost:8080/rates?productId=1&brandId=1&date=2022-01-01
