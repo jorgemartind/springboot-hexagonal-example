@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+#   postgres-db:
+#     image: postgres:latest
+#     restart: unless-stopped
+# #    env_file: ./.env
+#     environment:
+#       - POSTGRES_PASSWORD=postgrespw
+#     ports:
+#       - 5432:5432
+#     volumes:
+#       - db:/var/lib/postgresql/data
+
+  rates-backend:
+    # depends_on:
+    #   - postgres-db
+    build: ./rates-backend
+#    restart: on-failure
+#    env_file: ./.env
+    ports:
+      - 8080:8080
+    # environment:
+    #  - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/postgres
+    volumes:
+      - ~/.m2:/root/.m2
+    stdin_open: true
+    tty: true
+
+volumes:
+  db:
